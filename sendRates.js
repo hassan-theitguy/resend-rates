@@ -15,13 +15,14 @@ Daily Exchange Rates:
 ${JSON.stringify(data, null, 2)}
     `;
 
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: "Exchange Bot <onboarding@resend.dev>",
       to: process.env.EMAIL_TO,
       subject: "Daily Exchange Rates",
       text: body,
     });
 
+    console.log("Resend response:", result);
     console.log("Email sent successfully");
   } catch (err) {
     console.error("Error:", err);
