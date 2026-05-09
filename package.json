@@ -1,0 +1,8 @@
+{
+  "name": "exchange-rate-bot",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "resend": "^3.4.0"
+  }
+}
